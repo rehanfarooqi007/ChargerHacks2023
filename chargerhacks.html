@@ -1,0 +1,109 @@
+<html>
+
+    <!--
+    Copyright (c) 2023 Rehan Farooqi - All Rights Reserved
+    This is a project created for the ChargerHacks Hackathon
+    -->
+
+    <head>
+        <title>Garbage Sorter</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel = "stylesheet" href="chargerhacks.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&family=Open+Sans:wght@800&family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>Garbage Sorter</header>
+        <main>
+            <div id="container">
+                <div class="instructions">
+                    <p>Welcome to the Garbage Sorter tool!</p>
+                    <p>Select the garbage item you want to dispose using the dropdown menu</p>
+                    <p>Press the submit button on the right</p>
+                </div>
+
+                <select class=  "option">
+                    <option  value="compost">Banana Peels</option>
+                    <option  value="compost">Bath Tissues</option>
+                    <option  value="hazardous">Batteries</option>
+                    <option  value="garbage">Candy Wrappers</option>
+                    <option  value="recycle">Cardboard</option>
+                    <option  value="recycle">Clothes</option>
+                    <option  value="hazardous">Electronic Waste</option>
+                    <option  value="compost">Facial Tissues</option>
+                    <option  value="compost">Food Scraps</option>
+                    <option  value="recycle">Leather</option>
+                    <option  value="compost">Napkins</option>
+                    <option  value="hazardous">Paint</option>
+                    <option  value="recycle">Paper</option>
+                    <option  value="compost">Paper Towels</option>
+                    <option  value="hazardous">Pesticides</option>
+                    <option  value="recycle">Plastic Bottles</option>
+                    <option  value="recycle">Soda Cans</option>
+                </select>
+
+                <button id="submitButton">Submit</button>
+
+                <div class = "bin" id="recycleBin">
+                    <p>Recycle!</p>
+                </div>
+
+                <div class = "bin" id="compostBin">
+                    <p>Compost!</p>
+                </div>
+
+                <div class = "bin" id="hazardousBin">
+                    <p>Hazardous!</p>
+                </div>
+
+                <div class = "bin" id="garbageBin">
+                    <p>Garbage!</p>
+                </div>
+            </div>
+                <div class="paragraph">
+                    <h1>Why should you recycle?</h3>
+                    <p>Recycling trash when possible has significant benefits for our environment. Recycling reduces the amount of waste sent to landfills and incinerators, conserves energy, and prevents pollution. The world produces about 2.01 billion tons of solid waste a year, and approximately 75% of the world's garbage is estimated to be recyclable, but less than 20% of waste is recycled per year. </p>
+                </div>
+        </main>
+
+        <script>
+            $('.bin').hide()
+
+            function recycle() {
+                $('.bin').hide()
+                $('#recycleBin').fadeIn()
+            }
+
+            function compost() {
+                $('.bin').hide()
+                $('#compostBin').fadeIn()
+            }
+
+            function hazardous() {
+                $('.bin').hide()
+                $('#hazardousBin').fadeIn()
+            }
+
+            function garbage() {
+                $('.bin').hide()
+                $('#garbageBin').fadeIn()
+            }
+
+            function submit() {
+                var option = $(".option").val()
+                if (option=="recycle") {
+                    recycle()
+                } else if (option=="hazardous") {
+                    hazardous()
+                } else if (option=="compost") {
+                    compost()
+                } else if (option=="garbage") {
+                    garbage()
+                }
+            }
+            $("#submitButton").click(submit)
+        </script>
+    </body>
+</html>

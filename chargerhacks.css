@@ -1,0 +1,91 @@
+html{
+    background-color: blanchedalmond;
+}
+
+select{
+    margin:50px;
+}
+
+#recycleBin{
+    background-image:url('recycleBin.png');
+}
+
+#compostBin{
+    background-image: url('compostBin.png');
+}
+
+#hazardousBin{
+    background-image: url('hazardousBin.png');
+}  
+
+#garbageBin{
+    background-image: url('garbageBin.png');
+}
+
+.bin {
+    font-family: 'Lumanosimo', cursive;
+    font-family: 'Open Sans', sans-serif;
+    background-repeat: no-repeat;
+    background-size: 40% 40%;
+    background-position: center;
+    height:auto;
+    position:relative;
+    margin:auto;
+    width:500px;
+    height:500px;
+}
+
+header{
+    font-family: 'Lumanosimo', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 70;
+    text-align: center;
+    background-color: #b47725;
+    color:white;
+
+}
+
+div{
+    display:inline-block;
+}
+
+.paragraph{
+    font-size:150%;
+    color: black;
+    float:right;
+    width:33%;
+    height:70%;
+    padding-left: 1%;
+    padding-right:1%;
+    border: black 10px solid;
+    border-radius:60px;
+    background-color: tan;
+    margin:2%;
+}
+
+
+.instructions{
+    font-size:15px;
+    background-color: #8fd38f;
+    margin:auto;
+    border-radius: 50px;
+    width:100%;
+}
+
+#container{
+    font-family: 'Lumanosimo', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    width:35%;
+    height:70%;
+    margin:2%;
+    text-align: center;
+    border: black 10px solid;
+    border-radius:60px;
+}
+
+h1{
+    color:black;
+    text-align:center;
+}
